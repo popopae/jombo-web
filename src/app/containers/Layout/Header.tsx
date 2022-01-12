@@ -85,7 +85,7 @@ const Header: React.FC<HeaderProps> = (props: HeaderProps) => {
                 </div>
                 <div className="user-dropdown">
                     <button type="button" className="btn">
-                        <img src="../../assets/images/header/profile-empty.png" />
+                        <img src="./assets/images/header/profile-empty.png" />
                         <span>Waraphon Koedduang</span>
                     </button>
                 </div>
@@ -94,7 +94,7 @@ const Header: React.FC<HeaderProps> = (props: HeaderProps) => {
                         <div className="user-info media">
                             <div className="float-left">
                                 <div className="user-avatar">
-                                    <img src="../../assets/images/header/profile-picture.png" />
+                                    <img src="./assets/images/header/profile-picture.png" />
                                 </div>
                             </div>
                             <div className="media-body ellipsis">

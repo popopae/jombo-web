@@ -15,7 +15,7 @@ const NoPermission: React.FC<NoPermissionProps> = (props: any) => {
         <div className="access-wrap">
             <div className="ac-message">
                 <div className="n-oneplanet-logo"></div>
-                <img src="../assets/images/intercept/n_page_permission.png" className="n-thumbnail-empty" />
+                <img src="./assets/images/intercept/n_page_permission.png" className="n-thumbnail-empty" />
                 <br />
                 <span className="color-title font-heading">
                     {i18nHelper.translate('Permission.Body')}

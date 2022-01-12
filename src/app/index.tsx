@@ -1,10 +1,10 @@
 import * as React from 'react';
 import '../assets/scss/style.scss';
 // import PrivateRoute from './middleware/privateRoute';
-// import 'bootstrap/dist/js/bootstrap'
+import 'bootstrap/dist/js/bootstrap'
 import { Routes, Route } from 'react-router-dom';
 import HeaderLayout from 'app/containers/Layout/HeaderLayout';
-// import NoPermission from 'app/containers/Pages/Error/NoPermission';
+import NoPermission from 'app/containers/Pages/Error/NoPermission';
 import { PageEnum } from 'app/utils/enums/pageEnum';
 import Setting from 'app/containers/Pages/Setting/Setting';
 import UserManagement from 'app/containers/Pages/User/UserManagement';
@@ -30,7 +30,7 @@ const RouterApp: React.FC<RouterAppProps> = (props: any) => {
           <Route path={PageEnum.LIGHTING_MAP} element={<LightingMap />} />
           <Route path={PageEnum.USER_MANAGEMENT} element={<UserManagement />} />
         </Route>
-        {/* <Route path="*" element={<DashBoard />} /> */}
+        <Route path="*" element={<NoPermission />} />
       </Routes>
     </>
   );
