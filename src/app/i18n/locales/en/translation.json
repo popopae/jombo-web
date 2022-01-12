@@ -1,0 +1,19 @@
+{
+  "Common": {
+    "Lang":{
+      "English": "English",
+      "Thai": "Thai"
+    }
+  },
+  "DashBoard": {
+    "Label": {
+      "ElectricCurrent": "Electric current",
+      "Voltage": "Voltage",
+      "PowerFactor": "Power factor",
+      "ActiveElectricEnergy": "Active electric energy (kW.h)",
+      "EnergyConsumption": "Energy consumption trend",
+      "Frequency": "Power Factor",
+      "HistoryData": "History data"
+    }
+  }
+}

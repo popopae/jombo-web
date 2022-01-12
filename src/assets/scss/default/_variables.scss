@@ -1,0 +1,105 @@
+/* column set */
+$spacing: 18px;
+$spacing12: ($spacing * .5); //12
+$spacing16: ($spacing * .6666667); //16
+$spacing24: $spacing; //24
+$spacing36: ($spacing * 1.5); //36
+$spacing72: ($spacing * 3); //72
+
+$nav-width: 272px;
+
+/* Main Color  */
+$primary-light: #bee0f8;
+$primary-default: #01365b;
+$primary-hover: #275779;
+$primary-active: #002640;
+
+$primary-light-1: #d6e9d9;
+$primary-default-1: #0f7e2b;
+$primary-hover-1: #4c985f;
+$primary-active-1: #024e15;
+
+$primary-light-2: #ffe6d6;
+$primary-default-2: #f78300;
+$primary-hover-2: #ffa744;
+$primary-active-2: #a95a01;
+
+$secondary-default: #708090;
+$secondary-hover: #95a1ad;
+$secondary-active: #51606e;
+
+/* font set */
+$font-family-normal: arial, sans-serif;
+$font-xxlarge: 36px;
+$font-xlarge: 24px;
+$font-large: 18px;
+$font-medium: 16px;
+$font-normal: 14px;
+$font-small: 12px;
+
+$success-light: #d6e9d9;
+$success-default: #0f7e2b;
+$success-hover: #4c985f;
+$success-active: #024e15;
+
+$warning-light: #faeed6;
+$warning-default: #e6aa35;
+$warning-hover: #f7c76b;
+$warning-active: #cf9422;
+
+$fail-light: #f9dade;
+$fail-default: #df4759;
+$fail-hover: #eb7280;
+$fail-active: #9f1e2e;
+
+/* status */
+$green-status: #0f7e2b;
+$yellow-status: #e6aa35;
+$red-status: #FA5C7C;//#df4759;
+$blue-status: #4b98cd;
+$gray-status: #708090;
+$light-gray-status: #b5c4d1;
+$light-green: #19D77C;
+$light-yellow: #f3af00;
+
+/* color set */
+$color-white: #fff;
+$color-link: #4b98cd;
+$color-disable: #b5c4d1;
+$color-title: $primary-default;
+$color-normal: #434c58;
+$color-shadow: #181819;
+$color-placeholder: #c2c2c2;
+$color-sub: #707a87;
+$color-gray: #708090;
+$color-link-light: #009efb;
+
+/* background set */
+$color-background: #eef3f6;
+$color-background-disable: #e7ecf0;
+$color-background-hover: #eaf6ff;
+$color-background-active: #cde9ff;
+$color-background-expand: #d4ecfe;
+
+/* border set*/
+$color-border: #dedede;
+
+/* avl set */
+$color-background-gray: #f4f5f8;
+$color-title: #3b444f;
+$color-main: #586575;
+$color-sub-title: #7e8ea4;
+$color-link-op: #297CBB;
+$color-required: #d82c22;
+$color-placeholder-op: #999999;
+$color-border-op: #E6E8EB;
+$color-background-disabled: #edf1f4;
+$color-input-disabled-placeholder: #bec4cb;
+$color-background-link: #EDF1F4;
+$color-background-progress: #bccee3;
+$color-background-progress-light: #009efb;
+$color-border-fail: #efcac8;
+$color-background-fail: rgba(246, 216, 221, 0.7);
+$font-title: 30px;
+$font-body: 13px;
+$font-icon: 20px;

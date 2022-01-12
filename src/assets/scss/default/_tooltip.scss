@@ -1,0 +1,53 @@
+.tooltip {
+    margin-bottom: 6px;
+    &.show {
+        opacity: 1;
+    }
+    .tooltip-inner {
+        text-align: left;
+        padding: 8px;
+        max-width: 300px;
+        border-radius: 4px;
+        font-family: arial;
+        line-height: normal;
+        background: $primary-default;
+        p {
+            margin-bottom: 8px;
+        }
+        ul {
+            padding-left: $spacing24;
+            list-style: inherit;
+            li {
+                list-style: inherit;
+            }
+        }
+    }
+}
+.bs-tooltip-top {
+    .arrow::before {
+        border-top-color: $primary-default;
+    }
+}
+.bs-tooltip-right {
+    .arrow::before {
+        border-right-color: $primary-default;
+    }
+}
+.bs-tooltip-left {
+    .arrow::before {
+        border-left-color: $primary-default;
+    }
+}
+.bs-tooltip-bottom {
+    .arrow::before {
+        border-bottom-color: $primary-default;
+    }
+}
+
+a>i[data-toggle="tooltip"] {
+    line-height: normal!important;
+    margin-top: -8px;
+    margin-bottom: -8px;
+}
+
+

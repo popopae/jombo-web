@@ -1,0 +1,29 @@
+export interface ContactListManagementResponse {
+    indexKey?: number;
+    contactId?: number;
+    fullNameInter?: string;
+    fullNameLocal?: string;
+    jobTitleInter?: string;
+    jobTitleLocal?: string;
+    otherJobTitle?: string;
+    department?: string;
+    phoneCountryCode?: string;
+    phoneNo?: string;
+    phoneExt?: string;
+    mobileCountryCode?: string;
+    mobileNo?: string;
+    faxNo?: string;
+    faxExt?: string;
+    email?: string;
+    isDeleted?: string;
+    eid?: number;
+    favoriteSysUserId?: string;
+    favoriteUserId?: number;
+    JobTitleName?: string;
+    TitleName?: string;
+    supplierId?: number;
+    userId?: number;
+    isFavorite?: boolean;
+    blockUserId?: number;
+    updateDate?: Date;
+  }

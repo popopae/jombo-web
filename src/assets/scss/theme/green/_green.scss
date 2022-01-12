@@ -1,0 +1,142 @@
+body, .body {
+    &.theme-green, .theme-green {
+        height: auto;
+        strong.green {
+            color: $primary-default-1;
+        }
+        .navbar, .headbar {
+            color: $color-white;
+            background-color: $primary-default-1;
+            .lang, .dropdown-toggle, .dropdown-toggle:after, .icon-globe [class^="path"]:before {
+                color: $color-white!important;
+            }
+            .logo {
+                color: $color-white!important;
+                background-image: url('../images/header/logo-white.svg');
+                span {
+                    color: $color-white;
+                    &:before {
+                        border-left-color: rgba($color-white, 0.15);
+                    }
+                }
+            }
+        }
+        .nav-menu {
+            background-color: $color-white;
+            box-shadow: 0 0 6px 0 rgba($color-normal, 0.16);
+            //margin-top: 64px;
+            width: 220px;
+            height: calc(100% - 64px);
+            position: absolute;
+            padding: 8px 0;
+            .mainmenu {
+                li {
+                    &.active {
+                        >a {
+                            background: none;
+                            font-weight: bold;
+                            position: relative;
+                            &:before {
+                                content: '';
+                                background: $primary-default-1;
+                                width: 2px;
+                                height: 100%;
+                                position: absolute;
+                                left: 0;
+                                z-index: 2;
+                            }
+                        }
+                    }
+                    a, [class^="path"]:before, [class^="icon-small-"]:before {
+                        color: $color-normal;
+                    }
+                    a:hover {
+                        background: none;
+                    }
+                }
+            }
+        }
+        .container-fluid {
+            padding-left: 220px;
+        }
+        .content {
+            padding-bottom: $spacing24;
+        }
+        .card {
+            .btn-tag {
+                a:hover {
+                    i:before {
+                        color: $color-white;
+                    }
+                }
+            }
+            .btn-tag, .btn-toggle-tag {
+                border: 1px solid $primary-default-1;
+                color: $primary-default-1;
+                &.tag-primary {
+                    background: $primary-default-1;
+                    color: $color-white;
+                    &:hover {
+                        background: $primary-hover-1;
+                        border-color: $primary-hover-1;
+                    }
+                }
+                a {
+                    color: $primary-default-1;
+                    &:hover {
+                        background: $primary-default-1;
+                        color: $color-white;
+                    }
+                }
+                i.icon-small-dropdown {
+                    &:before {
+                        color: $primary-hover-1;
+                    }
+                }
+            }
+            .show>.btn-toggle-tag {
+                background: $primary-default-1;
+                color: $color-white;
+                >i:before {
+                    color: $color-white;
+                }
+            }
+            .page-navigation {
+                .page-item {
+                    .page-link {
+                        &:hover {
+                            background: $color-background-hover;
+                        }
+                    }
+                    &.active {
+                        .page-link {
+                            background: $primary-light-1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .modal {
+            .title {
+                color: $color-normal;
+            }
+            .form-group [class*=col-], .form-group {
+                label {
+                    color: $color-normal;
+                }
+            } 
+        }
+    }
+}
+
+body, .body {
+    &.body-login.theme-green {
+        height: 100%;
+        .container-login {
+            >[class*=col-]:first-child {
+                display: flex!important;
+            }
+        }
+    }
+}

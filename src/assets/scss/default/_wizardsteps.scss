@@ -1,0 +1,72 @@
+ul.wizard-steps {
+    text-align: center;
+    margin-bottom: $spacing16;
+    li {
+        display: inline-block;
+        width: 18%;
+        max-width: 206px;
+        position: relative;
+        vertical-align: top;
+        .step {
+            width: 30px;
+            height: 30px;
+            line-height: 26px;
+            border-radius: 100%;
+            margin: 0 auto 8px auto;
+            color: $color-disable;
+            border: 2px solid $color-background-disable;
+            display: block;
+            text-align: center;
+            font-weight: bold;
+        }
+        .title {
+            color: $color-disable;
+            margin: 0;
+        }
+        &.active {
+            .step {
+                background: $primary-default-1;
+                color: $color-white;
+                border: 2px solid $primary-default-1;
+                [class*="icon-"] {
+                    line-height: normal;
+                    &:before {
+                        color: $color-white;
+                    }
+                }
+                &:hover {
+                    background: $primary-hover-1;
+                    border-color: $primary-hover-1;
+                }
+            }
+            .title {
+                color: $primary-default-1;
+            }
+            &:before {
+                background: $primary-default-1;
+            }
+            &.last {
+                &:before {
+                    background: $color-border;
+                }
+            }
+        }
+        &:before {
+            content: '';
+            background: $color-border;
+            width: calc(100% - 48px);
+            height: 2px;
+            position: absolute;
+            //z-index: -1;
+            top: $spacing16;
+            left: 50%;
+            margin-top: -1px;
+            margin-left: 26px;
+        }
+        &:last-child {
+            &:before {
+                display: none;
+            }
+        }
+    }
+}

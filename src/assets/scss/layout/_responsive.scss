@@ -1,0 +1,540 @@
+@media (min-width: 1600px) {
+    .modal-full {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media (min-width: 991px) {
+    /*.table {
+        colgroup {
+            col:last-child {
+                width: auto!important;
+            }
+        }
+    }*/
+    //file:///Users/sittipat.won/Documents/ptvn-design/src/sww/jadehtml/company_role_permission/02_modal_role_assign_buyer.html
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1200px) {
+    .body-login {
+        >[class*="container-"] {
+            >[class*="col-"] {
+                padding-left: 6%!important;
+                padding-right: 6%!important;
+            }
+        }
+    }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 992px) {
+    .table-column-fix {
+        .row-detail {
+            .table {
+                width: 100%!important;
+            }
+        }
+        .sticky, .sticky-left, .sticky-right {
+            position: inherit;
+            left: auto!important;
+            right: auto!important;
+            &:after {
+                box-shadow: none!important;
+            }
+        }
+        &.slide-left.slide-right {
+            .sticky-right {
+                border-left: 1px solid $color-border;
+            }
+        }
+    }
+    .col-20pct {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 768px) {
+    /* Login */
+    .body-login {
+        .navbar, .headbar {
+            .logo:before {
+                color: $primary-default!important;
+            }
+            &.light {
+                .lang {
+                    .dropdown-toggle {
+                        &:after {
+                            color: $primary-default-1!important;
+                        }
+                        span {
+                            color: $color-normal!important;
+                        }
+                    }
+                    .icon-globe {
+                        [class^=path]:before {
+                            color: $primary-default-1!important;
+                        }
+                    }
+                }
+            }
+        }
+        [class*="container-"] {
+            height: auto!important;
+            >[class*="col-"] {
+                align-items: inherit!important;
+                transition: all 0.3s ease-out;
+                &:first-child {
+                    padding-top: 120px;
+                    padding-bottom: $spacing24;
+                    color: $color-title!important;
+                    .btn-outline {
+                        border-color: $color-border!important;
+                        color: $primary-default-1!important;
+                        background: $color-white;
+                        //border-color: $color-title!important;
+                        //color: $color-title!important;
+                    }
+                }
+                &:last-child {
+                    padding-top: $spacing24;
+                    padding-bottom: 64px;
+                    padding-top: 120px;
+                }
+            }
+            &.hide {
+                display: none;
+            }
+        }
+    }
+
+    .container-login {
+        >[class*="col-"] {
+            flex: 0 0 100%;
+            max-width: 100%;
+            &:first-child {
+                display: none!important;
+            }
+        }
+    }
+    .container-signup {
+        >[class*="col-"] {
+            flex: 0 0 100%;
+            max-width: 100%;
+            &:last-child {
+                display: none!important;
+            }
+        }
+    }
+
+    .bg-transition {
+        display: none;
+        transition: none;
+    }
+
+    /* form responsive */
+    .form-group {
+        &:last-child {
+            margin-bottom: $spacing16;
+        }
+    }
+    .form-group + .form-group {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    [class*=col-]:last-child {
+        >.form-group {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    [class*=col-] {
+       .form-group-border {
+            margin-bottom: $spacing16;
+        }
+        &:last-child {
+            .form-group-border {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .input-group {
+        .input-group.icon {
+            width: inherit;
+            margin-bottom: $spacing24;
+        }
+        .ml-3 {
+            margin: 0 auto;
+            margin-left: auto!important;
+        }
+    }
+
+    .user-dropdown {
+        .dropdown-toggle {
+            span {
+                display: none;
+            }
+        }
+    }
+
+    /* Show Hover */
+    .table-col-scroll .list-group.last a [class*=icon-], .table-cat-arrow td:last-child .btn {
+        display: block;
+    }
+
+    .media-body {
+        .d-flex {
+            display: block!important;
+            &[class*=mb-] {
+                display: flex!important;
+            }
+        }
+    }
+    .d-flex {
+        h3.title {
+            padding-right: $spacing24;
+        }
+    }
+    .no-card {
+        padding: 0 $spacing24;
+    }
+
+    .template-sticky-left{
+        .left-sticky{
+            display: none;
+        }
+        .right-content {
+            width: 100%;
+        }
+    }
+    .sm-mb-2{
+        margin-bottom: $spacing16;
+    }
+}
+
+@media (max-width: 682px) {
+    .content {
+        padding-bottom: 60px;
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 576px) {
+    h2.d-flex {
+        display: block!important;
+        >span {
+            display: block;
+            margin-bottom: $spacing24;
+        }
+        .btn-dropdown, .btn:not(.btn-icon) {
+            //margin-left: 0!important;
+            width: 100%!important;
+            &:last-child {
+                margin-bottom: 0!important;
+            }
+            .btn {
+                margin-bottom: 0!important;
+            }
+            &+.btn:not(.btn-icon) {
+                margin-top: 0;
+            }
+        }
+        .btn-icon+.btn-icon {
+            margin-top: 0!important;
+        }
+    }
+
+    .row {
+        [class*=col-] {
+            .text-right {
+                margin: 0 -2%;
+                .btn {
+                    width: 46%;
+                    margin: 0 2%!important;
+                }
+            }
+        }
+    }
+
+    .row-search {
+        [class*=col-]:first-child > .d-flex, [class*=col-]:first-child > .btn {
+            margin-bottom: $spacing12;
+        }
+        .inline-dropdown {
+            max-width: 100%;
+        }
+    }
+
+    .row-filter {
+        display: block;
+        .box-filter {
+            margin-bottom: 4px;
+        }
+    }
+
+    .dropdown-menu {
+        width: 100%;
+    }
+
+    /* form responsive */
+    .form-group .row:not(.row-fix-col) > [class*=col-], .form-group-border .row:not(.row-fix-col) > [class*=col-] {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: $spacing16;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    //file:///Users/sittipat.won/Documents/ptvn-design/src/sww/jadehtml/company_profile/06_address_edit.html
+    /*.form-group+.form-group {
+        [class*=col-] {
+            >.form-group:first-child {
+                margin-top: -$spacing16;
+            }
+        }
+    }*/
+    .title+.form-group {
+        >.row {
+            >[class*=col-]:first-child {
+                >.form-group {
+                    >.row {
+                        >[class*=col-]:first-child {
+                            >.form-check {
+                                padding-top: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .form-check {
+        padding-top: $spacing16;
+    }
+    
+    [class*=col-] {
+        .form-group-border {
+            margin-bottom: 0;
+        }
+    }
+    [class*=col-] {
+        &+[class*=col-] {
+            /*.row {
+                margin-top: $spacing16;
+            }*/
+            //file:///Users/sittipat.won/Documents/ptvn-design/src/sww/jadehtml/company_profile/04_company_info.html
+            .form-check {
+                margin-top: -$spacing16;
+                &.has-input {
+                    margin-top: 0;
+                }
+            }
+        }
+        .form-check {
+            &+.form-check {
+                margin-top: 0;
+            }
+        }
+        &+[class*=col-] {
+            .has-input {
+                margin-bottom: 0;
+                &+.has-input {
+                    margin-top: $spacing16;
+                }
+            }
+            &:last-child {
+                .form-check {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .has-input + .has-input {
+            margin-top: $spacing16;
+        }
+    }
+
+    .input-group {
+        .input-group {
+            .btn {
+                width: auto;
+            }
+        }
+    }
+
+    .form-action, .modal-footer {
+        //margin-left: -8px;
+        //margin-right: -8px;
+        [class*=float-] {
+            width: 50%;
+            padding: 0 8px;
+            margin: 0;
+        }
+        .float-left {
+            padding-left: 0;
+        }
+        .float-right {
+            padding-right: 0;
+        }
+    }
+    .full-modal-footer {
+        margin: 0 -8px;
+        [class*=float-] {
+            width: 50%;
+            padding: 0 8px;
+            .btn.float-right {
+                width: 100%;
+            }
+            .mobile {
+                position: relative;
+                left: -55%;
+                height: auto;
+                margin-top: $spacing12!important;
+                width: 100%;
+                border: none;
+            }
+        }
+        &.has-3-btn {
+            &+.full-modal-body {
+                bottom: 100px;
+            }
+        }
+    }
+    /* form responsive */
+    
+    .collapse-wrap {
+        .collapse-header {
+            .form-check {
+                .form-check-label {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .dropdown {
+        [class*=col-] {
+            margin-bottom: inherit!important;
+        }
+        .col-3 {
+            flex: 0 0 25%!important;
+            max-width: 25%!important;
+        }
+        .col-9 {
+            flex: 0 0 75%!important;
+            max-width: 75%!important;
+        }
+    }
+
+    button.btn[class*=btn-] {
+        width: 100%;
+        min-width: inherit;
+        margin-left: 0;
+        margin-right: 0;
+        +button.btn[class*=btn-] {
+            margin-top: $spacing12;
+        }
+    }
+    [class*=col-] {
+        >.text-right, >.float-right {
+            >button.btn[class*=btn-]:first-child {
+                margin-top: $spacing12;
+            }
+        }
+    }
+
+    button.btn.btn-sm {
+        width: inherit;
+    }
+
+    h2 {
+        .btn+button.btn[class*=btn-] {
+            margin-left: $spacing16;
+        }
+    }
+
+    .title-border {
+        button.btn.btn-sm {
+            margin-left: auto;
+        }
+    }
+
+    .row-spacing-smaller {
+        .col-8:first-child {
+            flex: 0 0 66.66667%;
+            max-width: 66.66667%;
+        }
+        .col-4:last-child {
+            flex: 0 0 33.33333%;
+            max-width: 33.33333%;
+        }
+    }
+
+    .upload-photo {
+        float: none!important;
+        margin: 0 auto $spacing24 auto!important;
+    }
+
+    .card-body > .media {
+        display: block!important;
+    }
+    .box-language {
+        .btn {
+            margin-top: 0!important;
+        }
+    }
+    .card-body {
+        .d-flex.align-items-start.mb-8px {
+            display: block!important;
+        }
+        .media-body {
+            .d-flex {
+                &[class*=mb-] {
+                    display: flex!important;
+                }
+            }
+        }
+    }
+    .title-border {
+        .button-inline {
+            .btn {
+                margin-top: 0!important;
+                &+.btn {
+                    margin-left: 8px!important;
+                }
+            }
+        }
+    }
+
+    .modal-dialog {
+        margin: $spacing24 $spacing16!important;
+    }
+
+    .form-check-absolute {
+        position: static;
+        margin-top: 0!important;
+        padding-top: $spacing12;
+        min-height: inherit;
+    }
+
+    .thumbnail-btn {
+        .btn {
+            width: inherit!important;
+            margin-left: $spacing16!important;
+            margin-top: 0!important;
+        }
+    }
+    
+    .thumbnail-file+.thumbnail-file {
+        margin-top: 0;
+        height: inherit!important;
+    }
+    .col-20pct {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

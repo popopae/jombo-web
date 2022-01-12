@@ -1,0 +1,94 @@
+$spacer: 24px !default;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge((0: 0,
+        1: ($spacer * .5), //12
+        2: ($spacer * .6666667), //16
+        3: $spacer, //24
+        4: ($spacer * 1.5), //36
+        5: ($spacer * 3) //72
+    ),
+    $spacers);
+$border-color: #dedede;
+$primary: #3699FF !default; // Bootstrap variable
+$primary-hover: #187DE4 !default; // Custom variable
+$primary-light: #E1F0FF !default; // Custom variable
+
+// Secondary colors
+// $secondary-hover: darken($gray-300, 4%) !default; // Custom variable
+// $secondary-light: $gray-200 !default; // Custom variable
+// $secondary-inverse: $dark-75 !default; // Custom variable
+
+// Success colors
+$success: #1BC5BD !default; // Bootstrap variable
+// $success-hover: #0BB7AF !default; // Custom variable
+// $success-light: #C9F7F5 !default; // Custom variable
+// $success-inverse: $white !default; // Custom variable
+
+// // Inco colors
+// $info: #8950FC !default; // Bootstrap variable
+// $info-hover: #7337EE !default; // Custom variable
+// $info-light: #EEE5FF !default; // Custom variable
+// $info-inverse: $white !default; // Custom variable
+
+// // Warning colors
+// $warning: #FFA800 !default; // Bootstrap variable
+// $warning-hover: #EE9D01 !default; // Custom variable
+// $warning-light: #FFF4DE !default; // Custom variable
+// $warning-inverse: $white !default; // Custom variable
+
+// Danger colors
+$danger: #F64E60 !default; // Bootstrap variable
+$danger-hover: #EE2D41 !default; // Custom variable
+$danger-light: #FFE2E5 !default; // Custom variable
+
+@import "gui";
+@import "custom";
+@import "swwgui";
+
+/* import default */
+// @import "./default/_variables";
+// @import "./default/_mixins";
+// @import "./default/_alert";
+// @import "./default/_content";
+// @import "./default/_breadcrumbs";
+// @import "./default/_buttons";
+// @import "./default/_dropdown";
+// @import "./default/_forms";
+// @import "./default/_icomoon";
+// @import "./default/_icons";
+// @import "./default/_modal";
+// @import "./default/_collapse";
+// @import "./default/_tab_menu";
+// @import "./default/_table";
+// @import "./default/_tooltip";
+// @import "./default/_typography";
+// @import "./default/_pagination";
+// @import "./default/_progress";
+// @import "./default/_upload";
+// @import "./default/_wizardsteps";
+// @import "./default/_utilities";
+
+/* component */
+// @import "./component/_antdesign";
+// @import "./component/_fixantdesign";
+// @import "./component/_slick";
+
+/* import layout */
+@import "./layout/_header";
+@import "./layout/_navleft";
+@import "./layout/_footer";
+@import "./layout/_shade";
+
+/* import responsive */
+// @import "./layout/_responsive";
+
+/* import component */
+// @import "./component/_login";
+
+/* import primary green */
+// @import "./theme/green/_green";
+
+/* feature */
+@import "./feature/_avl";
+@import "./material/style.material";

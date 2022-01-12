@@ -1,0 +1,6 @@
+//@import "./Input.less";
+
+.#{$prefixClass}-time-input {
+  //@include input();
+  width:40px;
+}

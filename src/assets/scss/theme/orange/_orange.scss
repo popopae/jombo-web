@@ -1,0 +1,166 @@
+/* change to green color */
+/*$color-link: $primary-default-1;
+$primary-hover: $primary-hover-1;
+$color-background-active: $primary-light-1;*/
+
+body, .body {
+    &.theme-orange, .theme-orange {
+        .btn-primary {
+            background: $primary-default-2;
+            border-color: $primary-default-2;
+            &:hover {
+                background: $primary-hover-2;
+                border-color: $primary-hover-2;
+            }
+            &:focus, &:visited, &:not(:disabled):not(.disabled):active {
+                background: $primary-active-2;
+                border-color: $primary-active-2;
+            }
+            &.disabled {
+                background: $color-background-disable!important;
+                border-color: $color-background-disable!important;
+            }
+        }
+        .btn-outline {
+            background: $color-white;
+            color: $primary-default-2;
+            [class*=icon-] {
+                span {
+                    &:before {
+                        color: $primary-default-2!important;
+                    }
+                }
+                &:before {
+                    color: $primary-default-2!important;
+                }
+            }
+            &:hover {
+                color: $color-white;
+                background: $primary-default-2;
+                border-color: $primary-default-2;
+                [class*=icon-] {
+                    span {
+                        &:before {
+                            color: $color-white!important;
+                        }
+                    }
+                    &:before {
+                        color: $color-white!important;
+                    }
+                }
+            }
+            &:focus, &:visited, &:not(:disabled):not(.disabled):active {
+                color: $primary-default-2;
+                background: $color-white;
+                border-color: $primary-default-2;
+                [class*=icon-] {
+                    span {
+                        &:before {
+                            color: $primary-default-2!important;
+                        }
+                    }
+                    &:before {
+                        color: $primary-default-2!important;
+                    }
+                }
+            }
+            &.white {
+                border-color: $color-white;
+                color: $color-white;
+                background: none;
+                &:hover, &:focus, &:visited, &:not(:disabled):not(.disabled):active {
+                    background: $color-white;
+                    color: $primary-default;
+                }
+                &.disabled {
+                    background: none!important;
+                    border-color: $color-disable;
+                    color: $color-disable;
+                }
+            }
+            &.noborder {
+                border-color: transparent!important;
+                background: none;
+                &:hover {
+                    background: $primary-light-2;
+                    color: $primary-default-2;
+                }
+                &:focus, &:visited, &:not(:disabled):not(.disabled):active {
+                    background: none;
+                    color: $primary-active-2;
+                }
+                &.disabled {
+                    border-color: transparent!important;
+                    background: none!important;
+                    [class*=icon-] {
+                        span {
+                            &:before {
+                                color: $color-disable!important;
+                            }
+                        }
+                        &:before {
+                            color: $color-disable!important;
+                        }
+                    }
+                }
+                [class*=icon-] {
+                    span {
+                        &:before {
+                            color: $primary-default-2!important;
+                        }
+                    }
+                    &:before {
+                        color: $primary-default-2!important;
+                    }
+                }
+            }
+            &.disabled {
+                background: $color-white!important;
+                border-color: $color-disable!important;
+                [class*=icon-] {
+                    span {
+                        &:before {
+                            color: $color-disable;
+                        }
+                    }
+                    &:before {
+                        color: $color-disable;
+                    }
+                }
+            }
+        }
+        .btn-icon {
+            [class*=icon-] {
+                span {
+                    &:before {
+                        color: $primary-default-2;
+                    }
+                }
+            }
+            &:hover {
+                [class*=icon-] {
+                    span {
+                        &:before {
+                            color: $primary-hover-2;
+                        }
+                    }
+                    &:before {
+                        color: $primary-hover-2;
+                    }
+                }
+            }
+            &:focus, &:active {
+                [class*=icon-] {
+                    span {
+                        &:before {
+                            color: $primary-active-2;
+                        }
+                    }
+                    &:before {
+                        color: $primary-active-2;
+                    }
+                }
+            }
+        }
+    }
+}

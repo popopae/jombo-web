@@ -1,0 +1,345 @@
+[class^="icon-"] {
+    font-size: 24px;
+    position: relative;
+    &.disabled {
+        span:before {
+            color: $color-disable;
+        }
+    }
+}
+
+[class^="icon-large-"] {
+    font-size: 48px;
+}
+
+[class^="icon-md-"] {
+    font-size: 16px;
+    height: 16px;
+} 
+
+[class^="icon-small-"] {
+    font-size: 12px;
+    height: 12px;
+}
+
+.icon-blank {
+    width: 24px;
+    height: 24px;
+}
+
+.icon-img {
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+}
+
+.icon-white {
+    [class^="path"]:before, &:before {
+        color: $color-white;
+    }
+}
+
+.icon-red {
+    [class^="path"]:before, &:before {
+        color: $fail-default;
+    }
+}
+
+.icon-active, .icon-green {
+    [class^="path"]:before, &:before {
+        color: $primary-default-1!important;
+    }
+    &:hover {
+        [class^="path"]:before, &:before {
+            color: $primary-hover-1!important;
+        }
+    }
+    &:active {
+        [class^="path"]:before, &:before {
+            color: $primary-active-1!important;
+        }
+    }
+}
+
+.icon-inactive {
+    [class^="path"]:before, &:before {
+        color: $color-disable!important;
+    }
+    &.icon-check-circle-fill {
+        .path2:before {
+            color: $color-white!important;
+        }
+    }
+}
+
+.icon-lowest {
+    .path1:before {
+        color: $color-disable!important;
+    }
+    .path2:before {
+        color: $primary-default-1!important;
+    }
+}
+
+.icon-highest {
+    .path1:before {
+        color: $primary-default-1!important;
+    }
+    .path2:before {
+        color: $color-disable!important;
+    }
+}
+
+.icon-gray {
+    [class^="path"]:before, &:before {
+        color: $secondary-default;
+    }
+}
+
+.icon-gray:hover, a .icon-gray:hover {
+    [class^="path"]:before, &:before {
+        color: $secondary-hover;
+    }
+}
+
+.icon-logo {
+    [class^="path1"]:before {
+        color: white;
+    }
+}
+
+.icon-inline-table-32 {
+    margin-top: -8px;
+    margin-bottom: -8px;
+    width: 32px;
+    border: 1px solid $color-border;
+    border-radius: 100%;
+}
+
+.img-square-table-32 {
+    margin-top: -8px;
+    margin-bottom: -8px;
+    margin-right: $spacing12;
+    min-width: 32px;
+    width: 32px;
+    height: 32px;
+    border: 1px solid $color-border;
+    border-radius: 4px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.img-square-table-64 {
+    margin-right: $spacing12;
+    min-width: 64px;
+    width: 64px;
+    height: 64px;
+    border: 1px solid $color-border;
+    border-radius: 4px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.icon-loading:before {
+	content: "\e9ec";
+}
+
+/* Spinner */
+@keyframes anim-rotate {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.spinner {
+    display: inline-block;
+    font-size: 20.2px;
+	line-height: 1;
+	animation: anim-rotate 2s infinite linear;
+    animation: anim-rotate 1s infinite steps(12);
+}
+
+/*@-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(359deg);
+              transform: rotate(359deg);
+    }
+}
+  
+@keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(359deg);
+              transform: rotate(359deg);
+    }
+}
+.icon-spin {
+    -webkit-animation: spin 1s infinite teps(8);
+    animation: spin 1s infinite steps(8);
+    display: inline-block;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    line-height: 1!important;
+    span {
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        &:before {
+            height: 24px;
+            width: 24px;
+            display: inline-block;
+            margin-left: 0!important;
+        }
+    }
+}*/
+/* Spinner */
+
+.icon-notification-mark.icon-white {
+    [class^="path2"]:before {
+        color: $primary-default-1;
+    }
+}
+
+.status {
+    position: relative;
+    padding-left: $spacing16;
+    &.text-green{
+        color: $light-green;
+        .icon-dot-status{
+            background: $light-green;
+        }
+    }
+    &.text-yellow{
+        color: $light-yellow;
+        .icon-dot-status{
+            background: $light-yellow;
+        }
+    }
+    &.text-red{
+        color: $red-status;
+        .icon-dot-status{
+            background: $red-status;
+        }
+    }
+    .icon-dot-status {
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        //display: inline-block;
+        margin-top: 5px;
+        margin-right: 8px;
+        //background: #f00;
+        position: absolute;
+        left: 0;
+        &.yellow {
+            background: $yellow-status;
+        }
+        &.gray {
+            background: $gray-status;
+        }
+        &.green {
+            background: $green-status;
+        }
+        &.light-green {
+            background: $light-green;
+        }
+        &.blue {
+            background: $blue-status;
+        }
+        &.red {
+            background: $red-status;
+        }
+        &.light-gray{
+            background: $light-gray-status;
+        }
+    }
+    &.img-status {
+        padding: 0;
+        line-height: 0;
+        .icon-dot-status {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: auto;
+            margin-top: -5px;
+            margin-right: 15px;
+        }
+    }
+}
+
+.icon-x4 {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+}
+
+.icon-x3 {
+    font-size: 36px;
+    width: 36px;
+    height: 36px;
+}
+
+.icon-x2 {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+}
+
+.icon-x1 {
+    font-size: 12px;
+    width: 12px;
+    height: 12px;
+}
+
+
+.icon-cancel-circle-fill .path2:before {
+	color: $fail-default!important;
+}
+.icon-cancel-circle-fill .path3:before {
+	color: $color-white!important;
+}
+.icon-check-circle-fill .path1:before {
+	color: $success-default!important;
+}
+.icon-check-circle-fill .path2:before {
+	color: $color-white!important;
+}
+
+.icon-sort{
+    .path1:before, .path2:before {
+        color: rgb(181, 196, 209) !important;
+    } 
+
+    &.asc{
+        .path1:before {
+            color: rgb(15, 126, 43) !important;
+        }
+        
+        .path2:before {
+            color: rgb(181, 196, 209) !important;
+        }       
+    }
+    &.desc{
+        .path1:before {
+            color: rgb(66, 107, 143) !important;
+        }
+        
+        .path2:before {
+            color: rgb(15, 126, 43) !important;
+        }
+    }
+}

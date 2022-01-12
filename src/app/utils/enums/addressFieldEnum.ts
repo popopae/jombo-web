@@ -1,0 +1,16 @@
+export enum AddressFieldEnum {
+    BUILDING_NAME = 'Register.Label.BuildingName',
+    ROOM = 'Register.Label.Room',
+    FLOOR = 'Register.Label.Floor',
+    VILLAGE_NAME = 'Register.Label.VillageName',
+    HOUSE_NUMBER = 'Register.Label.HouseNumber',
+    MOO_NUMBER = 'Register.Label.MooNumber',
+    SOI = 'Register.Label.Soi',
+    STREET = 'Register.Label.Street',
+    COUNTRY = 'Register.Label.Country',
+    STATE = 'Register.Label.State',
+    CITY = 'Register.Label.City',
+    SUB_DISTRICT = 'Register.Label.SubDistrict',
+    POSTAL_CODE = 'Register.Label.PostalCode',
+    Address = 'Register.Label.Address',
+}

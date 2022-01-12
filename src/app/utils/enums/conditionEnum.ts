@@ -1,0 +1,14 @@
+
+export enum ConditionEnum {
+    GREATER_THAN = 'GREATER_THAN',
+    LESS_THAN = 'LESS_THAN',
+    GREATER_THAN_EQUAL = 'GREATER_THAN_EQUAL',
+    LESS_THAN_EQUAL = 'LESS_THAN_EQUAL',
+    NOT_EQUAL = 'NOT_EQUAL',
+    EQUAL = 'EQUAL',
+    LIKE = 'LIKE',
+    LIKE_START = 'LIKE_START',
+    LIKE_END = 'LIKE_END',
+    IN = 'IN',
+    NOT_IN = 'NOT_IN'
+}

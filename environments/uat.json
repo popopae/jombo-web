@@ -1,0 +1,5 @@
+{
+    "GATEWAY_URL": "https://api-directory-demo.pantavanij.com/coresupplier/",
+    "PASSWORD_ENCRYPTED_KEY": "nfd5vKL2dV7DFjHG8QAdegIY2dYhoJlB",
+    "CREATE_AVL_REQUEST_URL": "https://avl-web-qa.pantavanij.com/avl-request-supplier-directory"
+}

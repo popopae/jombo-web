@@ -1,0 +1,93 @@
+.nav-tabs {
+    overflow: hidden;
+    margin-bottom: $spacing24;
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    clear: left;
+    border-bottom: 1px solid $color-border;
+    a {
+        float: left;
+        padding: $spacing12 $spacing16;
+        display: block;
+        position: relative;
+        min-width: 100px;
+        max-width: 300px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-weight: normal;
+        color: $color-normal;
+        &:hover {
+            color: $color-link;
+        }
+        &.active {
+            position: relative;
+            color: $primary-default;
+            font-weight: bold;
+            background: none;
+            &:before {
+                position: absolute;
+                background: $primary-default;
+                content: '';
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 1;
+            }
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        &.disabled {
+            color: $color-disable;
+            cursor: default;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.nav-tabs-1 {
+    a {
+        padding: $spacing12 $spacing16;
+        display: block;
+        width: 100%;
+        color: $color-normal;
+        &:hover {
+            background-color: $color-background;
+        }
+        &.active {
+            position: relative;
+            color: $primary-default;
+            font-weight: bold;
+            background: none;
+            &:before {
+                position: absolute;
+                background: $primary-default;
+                content: '';
+                width: 2px;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 1;
+            }
+        }
+    }
+    &.fixed {
+        position: fixed;
+        top: 88px;
+        z-index: 5;
+    }
+}
+
+.tab-content {
+    @include clearfix;
+    &.border {
+        border: 1px solid $color-border!important;
+        padding: $spacing24;
+        border-radius: 4px;
+    }
+}

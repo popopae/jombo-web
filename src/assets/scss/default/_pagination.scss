@@ -1,0 +1,67 @@
+.page-navigation {
+    margin-top: $spacing24;
+    @include clearfix;
+    .pagination {
+        margin-top: 8px;
+    }
+    .page-item {
+        min-width: 24px;
+        height: 24px;
+        margin-right: 8px;
+        .page-link {
+            border: none;
+            border-radius: $spacing24;
+            color: $color-normal;
+            background: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 24px;
+            padding-left: 8px;
+            padding-right: 8px;
+            i:before {
+                color: $color-sub;
+            }
+            &:hover {
+                background: $color-background-hover;
+            }
+            &.disabled {
+                i:before {
+                    color: $color-disable;
+                }
+            }
+        }
+        .page-dot {
+            &:hover {
+                background: none;
+                cursor: default;
+            }
+        }
+        &:first-child {
+            .page-link {
+                background: none!important;
+            }
+        }
+        &:last-child {
+            margin-right: 0;
+            .page-link {
+                background: none!important;
+            }
+        }
+        &.active {
+            .page-link {
+                background: $color-background-active;
+            }
+        }
+    }
+    .float-left {
+        display: table;
+        .showing {
+            display: table-cell;
+            padding-right: 8px;
+            vertical-align: middle;
+        }
+    }
+}

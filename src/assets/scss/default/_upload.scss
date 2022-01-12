@@ -1,0 +1,705 @@
+.thumbnail {
+    width: 248px;
+    border: 1px solid $color-border;
+    border-radius: 4px;
+    margin-right: 20px;
+    margin-top: 8px;
+    overflow: hidden;
+    //float: left;
+    display: inline-block;
+    .img-thumbnail {
+        background: $color-background;
+        border-bottom: 1px solid $color-border;
+        height: 120px;
+        position: relative;
+        img {
+            height: 100%;
+            margin: 0 auto;
+            display: block;
+        }
+        >a, .action {
+            display: inline-block;
+            position: absolute;
+            bottom: $spacing16;
+            right: $spacing16;
+            display: none;
+        }
+        .upload {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba($color-normal, 0.6);
+            .icon-loader {
+                position: absolute;
+                bottom: $spacing16;
+                right: $spacing16;
+            }
+            .action {
+                >a {
+                    position: static;
+                    margin-left: $spacing16;
+                    display: inline-block;
+                }
+            }
+            &+a {
+                display: none;
+            }
+        }
+    }
+    .caption {
+        padding: $spacing12;
+        p {
+            margin-bottom: 8px;
+        }
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+    &:hover {
+        a, .action {
+            display: inline-block;
+        }
+        .upload {
+            .icon-loader {
+                display: none;
+            }
+        }
+    }
+    &.failed {
+        .action {
+            display: inline-block;
+        }
+        .status-upload {
+            color: $fail-default;
+        }
+    }
+}
+
+.select-file {
+    border: 2px dashed $color-border;
+    padding: 8px 12px 8px 8px;
+    margin-top: 8px;
+    position: relative;
+    border-radius: 4px;
+    align-items: center;
+    input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        cursor: pointer;
+        padding-top: 15px;
+    }
+}
+
+.has-first {
+    >div:first-child {
+        .thumbnail-file {
+            background: none;
+            padding: 0;
+            border: 0;
+            height: calc(100% - 8px);
+            .upload-dragdrop {
+                min-height: 100%;
+                padding: $spacing12;
+            }
+        }
+    }
+}
+
+[class*=col-] {
+    .thumbnail-file {
+        height: calc(100% - 8px);
+    }
+}
+
+.disabled {
+    .upload-dragdrop {
+        pointer-events: none;
+        i span:before {
+            color: $color-disable!important;
+        }
+        .btn-link {
+            pointer-events: none;
+            color: $color-disable!important;
+        }
+    }
+}
+.thumbnail-file-failed p {
+    margin-bottom: 8px!important;
+}
+.thumbnail-file {
+    background: $color-background;
+    border: 1px solid $color-border;
+    margin-top: 8px;
+    position: relative;
+    border-radius: 4px;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    &.is-invalid {
+        border-color: $fail-default;
+        background: $fail-light;
+        small {
+            color: $fail-default;
+        }
+    }
+    &.uploading {
+        strong {
+            color: $color-disable;
+        }
+        .progress {
+            position: absolute;
+            bottom: -1px;
+            top: inherit;
+        }
+        .progress-bar {
+            background: $blue-status;
+        }
+    }
+    &.media {
+        //margin: -8px -12px 0 -8px;
+        padding: 8px 12px 8px 8px;
+    }
+    .thumbnail-img {
+        position: relative;
+        height: 95px;
+        i.icon-thumbnail {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+        }
+        .thumbnail-btn {
+            position: absolute;
+            bottom: $spacing12;
+            right: $spacing12;
+            display: none;
+            .btn {
+                min-width: inherit;
+                padding: 8px;
+                [class^=icon-] {
+                    vertical-align: top;
+                }
+                &:hover {
+                    background: $secondary-hover;
+                }
+            }
+        }
+        img {
+            margin: 0 auto;
+            border-radius: 0;
+            display: block;
+            width: inherit!important;
+            height: 100%!important;
+            border: none;
+        }
+    }
+    .thumbnail-caption {
+        margin: 0;
+        padding: $spacing12;
+        background: $color-white;
+        border-top: 1px solid $color-border;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        height: 100%;
+        strong, small {
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        small:last-child {
+            margin-top: 4px;
+        }
+        [class*=icon-] {
+            cursor: move;
+            span:before {
+                color: $color-gray!important;
+            }
+            &:hover {
+                span {
+                    &:before {
+                        color: $secondary-hover!important;
+                    }
+                }
+                &:before {
+                    color: $secondary-hover!important;
+                }
+            }
+            &:focus, &:active {
+                span {
+                    &:before {
+                        color: $secondary-active!important;
+                    }
+                }
+                &:before {
+                    color: $secondary-active!important;
+                }
+            }
+        }
+    }
+    &:hover {
+        .thumbnail-btn {
+            display: block;
+        }
+    }
+    img {
+        width: 48px;
+        border-radius: 4px;
+        border: 1px solid $color-border;
+    }
+    p {
+        margin-bottom: 8px;
+        word-break: break-word;
+    }
+    a.btn-link {
+        display: inline-block;
+        margin-bottom: 8px;
+    }
+    .action {
+        .uploading {
+            .spinner {
+                display: inline-block;
+            }
+            a {
+                display: none;
+            }
+            &:hover {
+                .spinner {
+                    display: none;
+                }
+                a {
+                    display: inline-block;
+                }
+            }
+        }
+        a, .icon-loader {
+            margin-left: $spacing16;
+            display: inline-block;
+            &:first-child {
+                margin: 0;
+            }
+            i span:before {
+                color: $color-gray!important;
+            }
+        }
+    }
+    .status-upload {
+        display: block;
+    }
+    &.failed {
+        .status-upload {
+            color: $fail-default;
+        }
+    }
+    .media-body {
+        margin-top: 2px;
+    }
+    .progress {
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        right: -1px;
+        border-radius: 4px;
+    }
+}
+
+.wrapper-cap {
+    margin-bottom: $spacing24;
+    position: relative;
+    background-color: #222;
+    cursor: grab;
+    .image-cap {
+        position: relative;
+        width: 492px;
+        height: 492px;
+        border-radius: 50%;
+        //border: 1px solid $color-border;
+        overflow: hidden;
+        
+        img {
+            width: 100%;
+            position: absolute;
+        }
+    }
+    .image-cap-background {
+        opacity: .6;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.upload-dragdrop {
+    min-height: 160px;
+    background-image: repeating-linear-gradient(0deg, $color-border, $color-border 10px, transparent 10px, transparent 20px, $color-border 20px), repeating-linear-gradient(90deg, $color-border, $color-border 10px, transparent 10px, transparent 20px, $color-border 20px), repeating-linear-gradient(180deg, $color-border, $color-border 10px, transparent 10px, transparent 20px, $color-border 20px), repeating-linear-gradient(270deg, $color-border, $color-border 10px, transparent 10px, transparent 20px, $color-border 20px);
+	background-size: 1px 100%, 100% 1px, 1px 100% , 100% 1px;
+	background-position: 0 0, 0 0, 100% 0, 0 100%;
+	background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    &:hover {
+        background: $color-background;
+    }
+    .btn-link {
+        position: relative;
+        input {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            cursor: pointer;
+            padding-top: 15px;
+        }
+    }
+}
+
+.upload-image {
+    position: relative;
+    &.no-hover:hover {
+        &:after {
+            display: none;
+        }
+        span.img {
+            i {
+                span:before {
+                    color: $secondary-default;
+                }
+            }
+        }
+    }
+    &.uploading {
+        pointer-events: none;
+        .progress {
+            position: absolute;
+            text-align: center;
+            left: $spacing12;
+            right: $spacing12;
+            top: 50%;
+            margin-top: -2px;
+        }
+        &:after {
+            display: none!important;
+        }
+    }
+    &.border-circle {
+        &:after {
+            border-radius: 100%!important;
+        }
+    }
+    &.default{
+        span.img {
+            i {
+                span:before {
+                    color: $secondary-default !important;
+                }
+            }
+        }
+        &:hover{
+            &:after {
+                background-color: $color-background;
+            }
+            
+        }
+    }
+    span.img {
+        width: 128px;
+        height: 128px;
+        border: 1px solid $color-border;
+        border-radius: 4px;
+        display: block;
+        position: relative;
+        z-index: 2;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        &.dashed{
+            border-style: dashed !important;
+        }
+        i {
+            position: absolute;
+            text-align: center;
+            left: 0;
+            right: 0;
+            top: 50%;
+            margin-top: -24px;
+            span:before {
+                color: $color-disable;
+            }
+        }
+        &.thumb-64 {
+            width: 64px;
+            height: 64px;
+            i {
+                margin-top: -12px;
+            }
+        }
+    }
+    &+input[type="file"] {
+        display: none;
+    }
+    .thumbnail-img {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        &+span.img {
+            i {
+                display: none;
+            }
+        }
+    }
+    &:hover {
+        &:after {
+            background-color: rgba($color-normal, 0.6);
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            border-radius: 6px;
+        }
+        span.img {
+            i {
+                span:before {
+                    color: $color-white;
+                }
+            }
+        }
+        .thumbnail-img {
+            &+span.img {
+                i {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.upload-photo {
+    &.btn-icon {
+        border: 1px solid $color-border;
+        &.disabled, &:disabled {
+            border: 1px solid $color-background-disable!important;
+            background-color: $color-background-disable!important;
+        }
+    }
+    [class^="icon"] {
+        line-height: 1!important;
+    }
+    img {
+        margin: 0 auto;
+        display: block;
+    }
+    span.img {
+        width: 128px;
+        height: 128px;
+        border: 1px solid $color-border;
+        border-radius: 4px;
+        display: block;
+        position: relative;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        i {
+            position: absolute;
+            text-align: center;
+            left: 0;
+            right: 0;
+            top: 50%;
+            margin-top: -24px;
+            span:before {
+                color: $secondary-default;
+            }
+        }
+        .uploading {
+            position: absolute;
+            text-align: center;
+            left: $spacing12;
+            right: $spacing12;
+            top: 50%;
+            margin-top: -2px;
+        }
+        &:hover {
+            i {
+                span:before {
+                    color:$secondary-hover;
+                }
+            }
+        }
+    }
+    &:not(.btn) {
+        .rounded-circle, .rounded {
+            >[class^="icon"] {
+                z-index: 1;
+                position: absolute;
+                left: 0;
+                right: 0;
+                text-align: center;
+                margin: 0 auto;
+                [class^="path"]:before {
+                    color: $color-white;
+                }
+            }
+        }
+    }
+    /*.rounded-circle, .rounded {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        >[class^="icon"] {
+            display: none;
+            &:before {
+                color: $color-white;
+            }
+        }
+        &:hover, &.loading {
+            >[class^="icon"] {
+                display: block;
+            }
+            &:before {
+                background-color: rgba($color-normal, 0.6);
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 1;
+            }
+        }
+        &.loading {
+            cursor: default;
+        }
+    }
+    &.show {
+        .rounded-circle, .rounded {
+            >[class^="icon"] {
+                display: none;
+            }
+            &:before {
+                background-color: rgba($color-normal, 0.6);
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 1;
+                display: block;
+                display: none;
+            }
+        }
+    }
+    .rounded {
+        border-radius: 4px;
+        &:before {
+            border-radius: 4px;
+        }
+    }
+    .rounded-circle {
+        &:before {
+            border-radius: 100%;
+        }
+    }*/
+    .dropdown-menu {
+        min-width: 184px;
+    }
+    &+input[type="file"] {
+        display: none;
+    }
+    &.w-80 {
+        .rounded-circle:before {
+            width: 80px;
+            height: 80px;
+        }
+    }
+    &.w-165 {
+        .rounded-circle:before {
+            width: 165px;
+            height: 165px;
+        }
+    }
+}
+
+.upload-banner {
+    border-radius: 4px;
+    width: 100%;
+    height: 95px;
+    background-image: repeating-linear-gradient(0deg, $color-border, $color-border 10px, transparent 10px, transparent 20px, $color-border 20px), repeating-linear-gradient(90deg, $color-border, $color-border 10px, transparent 10px, transparent 20px, $color-border 20px), repeating-linear-gradient(180deg, $color-border, $color-border 10px, transparent 10px, transparent 20px, $color-border 20px), repeating-linear-gradient(270deg, $color-border, $color-border 10px, transparent 10px, transparent 20px, $color-border 20px);
+	background-size: 1px 100%, 100% 1px, 1px 100% , 100% 1px;
+	background-position: 0 0, 0 0, 100% 0, 0 100%;
+	background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    &:hover{
+        .box-action{
+            display: flex;
+        }
+    }
+    &.default{
+        .box-action{
+            display: flex;
+            cursor: pointer;
+            &:hover {
+                background: $color-background;
+            }
+        }
+    }
+    .box-action{
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        &:hover{
+            background: rgba(67, 76, 88, 0.6);
+        }
+        .thumbnail-btn{
+            .btn{
+                width: 40px;
+                min-width: 0;
+                padding: 0;
+                text-align: center;
+            }
+        }
+    }
+    .icon-upload{
+        font-size: 40px;
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+#selectedFile {
+    display: none;
+}

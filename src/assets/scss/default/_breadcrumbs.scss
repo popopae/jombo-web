@@ -1,0 +1,37 @@
+.breadcrumb {
+    background: none;
+    font-size: 12px;
+    margin-bottom: $spacing16;
+    padding: 0;
+    line-height: normal;
+    .breadcrumb-item {
+        display: flex;
+        &+.breadcrumb-item {
+            padding-left: 0;
+            &:before {
+                font-family: 'icomoon';
+                content: '/';
+                margin: 1px 8px 0 8px;
+                padding-right: 0;
+                color: $color-gray;
+                font-weight: normal;
+            }
+        }
+        &.active {
+            //font-weight: bold;
+            //color: $primary-default;
+            color: $color-sub;
+        }
+        a {
+            display: flex;
+            align-items: center;
+            i {
+                display: inline-block;
+                margin-right: 8px;
+                &:before {
+                    color: $color-link;
+                }
+            }
+        }
+    }
+}

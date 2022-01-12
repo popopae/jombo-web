@@ -1,0 +1,28 @@
+// Placeholder text
+@mixin placeholder {
+    // Firefox
+    &::-moz-placeholder {
+        color: $color-placeholder;
+        opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+    }
+
+    &:-ms-input-placeholder {
+        color: $color-placeholder;
+    }
+    // Internet Explorer 10+
+    &::-webkit-input-placeholder {
+        color: $color-placeholder;
+    }
+    // Safari and Chrome
+}
+@mixin clearfix() {
+    &:after,
+    &:before {
+        content: " "; // 1
+        display: table; // 2
+    }
+
+    &:after {
+        clear: both;
+    }
+}

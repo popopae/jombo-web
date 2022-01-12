@@ -1,0 +1,35 @@
+export enum UserBranchStatusIdEnum {
+    Open = 1,
+    Closedown = 2,
+    Blacklist = 3,
+    DraftStep1 = 4,
+    DraftStep2 = 5,
+    DraftStep3 = 6,
+    DraftStep4 = 7,
+    DraftStep5 = 15,
+    Awaiting = 8,
+    Approved = 9,
+    Rejected = 10,
+    Active = 11,
+    InActive = 12,
+  }
+  
+  export enum UserBranchStatusNameEnum {
+    Open = "Common.UserBranchStatus.Open",
+    Closedown = "Common.UserBranchStatus.Closedown",
+    Blacklist = "Common.UserBranchStatus.Blacklist",
+    DraftStep1 = "Common.UserBranchStatus.DraftStep1",
+    DraftStep2 = "Common.UserBranchStatus.DraftStep2",
+    DraftStep3 = "Common.UserBranchStatus.DraftStep3",
+    DraftStep4 = "Common.UserBranchStatus.DraftStep4",
+    DraftStep5 = "Common.UserBranchStatus.DraftStep5",
+    Awaiting = "Common.UserBranchStatus.Awaiting",
+    Approved = "Common.UserBranchStatus.Approved",
+    Rejected = "Common.UserBranchStatus.Rejected",
+    Active = "Common.UserBranchStatus.Active",
+    InActive = "Common.UserBranchStatus.InActive",
+    RequestToJoin = "Common.UserBranchStatus.RequestToJoin",
+    Cancelled = "Common.UserBranchStatus.Cancelled",
+    RequestApproved = "Common.UserBranchStatus.RequestApproved",
+    RequestRejected = "Common.UserBranchStatus.RequestRejected"
+  }

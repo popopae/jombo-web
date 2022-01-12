@@ -1,0 +1,222 @@
+@import "style";
+.theme-orange {
+    @import "theme/orange/_icomoon";
+}
+@import "theme/orange/_orange";
+
+body {
+    padding-right: 0!important;
+}
+
+/* Color */
+.box-wrapper {
+    display: inline-block;
+    padding-right: $spacing24;
+    margin-right: -4px;
+    vertical-align: top;
+    &:last-child {
+        padding-right: 0;
+        margin-right: 0;
+    }
+    .box-color {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 8px;
+    }
+    .box-detail {
+        width: 100px;
+    }
+}
+
+.background-white {
+    background: white;
+    margin-left: -$spacing24;
+    margin-right: -$spacing24;
+    padding: $spacing24;
+}
+
+.table-option {
+    >tbody {
+        >tr {
+            >td {
+                padding: 0;
+                &:first-child {
+                    width: 100px;
+                }
+                table {
+                    td {
+                        padding: 8px;
+                    }
+                }
+                .td-dark {
+                    background: $primary-default;
+                }
+            }
+        }
+    }
+}
+
+.light-box {
+    margin: 0 -24px;
+    padding: 24px;
+}
+.dark-box {
+    background: $primary-default;
+    margin: 0 -24px;
+    padding: 24px;
+}
+
+.nav-menu {
+    padding-bottom: 67px;
+}
+
+.example-group {
+    margin-bottom: 48px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &.full {
+        .content-group {
+            margin-left: -$spacing24;
+            margin-right: -$spacing24;
+            background: $color-background;
+        }
+    }
+}
+
+.clipboard-group {
+    padding: $spacing24 $spacing24 0 $spacing24;
+    background: rgba($color-background-disable, 0.25);
+    position: relative;
+    border-radius: 4px;
+    margin: $spacing24 0;
+    display: none;
+    .hljs {
+        background: none;
+        padding: 0;
+    }
+    pre {
+        margin: 0;
+    }
+    .pre {
+        white-space: pre;
+    }
+    .hljs {
+        padding-bottom: $spacing24;
+    }
+    .btn-link {
+        position: absolute;
+        top: 16px;
+        right: 24px;
+        font-size: 12px;
+    }
+}
+
+//Iconography
+p.box-col-icon{
+    margin: 0 0 16px;
+    [class^="icon-"], [class*=" icon-"]{
+        vertical-align: middle;
+        top:-1px;
+    }
+}
+.title-icon{
+    display:inline-block;
+    margin-left: 8px;
+    line-height: 24px;
+}
+.box-icon-12{
+    border-top: 1px solid #dedede;
+    padding-top: 20px;
+    margin-top: 8px;
+}
+
+/* Modal */
+.full-modal-wrap {
+    position: relative;
+    height: 736px;
+}
+.full-modal-header, .full-modal-body, .full-modal-footer {
+    position: absolute;
+}
+.modal {
+    position: relative;
+    .modal-dialog {
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+}
+.modal-backdrop {
+    display: none;
+}
+.modal-open {
+    overflow: initial;
+}
+
+.int {
+    display: inline-block!important;
+    font-size: 24px;
+    font-weight: bold;
+    width: 24px;
+    height: 24px;
+    line-height: 1;
+    text-align: center;
+    +span {
+        margin-left: 12px;
+    }
+}
+
+.toggle-clipboard {
+    background-color: white;
+    box-shadow: 0 12px 20px rgba($color-normal, 0.15);
+    border: 1px solid $color-border;
+    padding: $spacing12;
+    position: fixed;
+    bottom: $spacing24;
+    right: $spacing24;
+    z-index: 99999;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    i {
+        display: block;
+        &.show {
+            .path1:before {
+                content: "\e938";
+            }
+            .path2:before {
+                content: "\e939";
+            }
+        }
+    }
+    small {
+        font-size: 10px;
+    }
+}
+
+.nav-open {
+    .switch-clipboard {
+        width: 272px;
+        .text-clipboard {
+            display: block;
+        }
+    }
+}
+.switch-clipboard {
+    position: fixed;
+    z-index: 99999;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding: $spacing24 20px;
+    background-color: $primary-default;
+    width: 72px;
+    .text-clipboard {
+        display: inline-block;
+        margin-left: 8px;
+        color: $color-white;
+        font-size: 12px;
+        display: none;
+    }
+}

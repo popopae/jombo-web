@@ -1,0 +1,56 @@
+$prefixClass: ant-calendar;
+$timePickerClass: ant-time-picker;
+
+.#{$prefixClass}-picker-container {
+  position: absolute;
+  z-index: 1050;
+  margin-top: 8px;
+}
+.#{$prefixClass}-my-select {
+  position: relative;
+  padding-left: 8px;
+  &:before {
+    content: '\e9ad';
+    position: absolute;
+    right: -20px;
+    font-family: 'icomoon';
+    color: $color-gray;
+  }
+}
+
+.#{$prefixClass}-hidden, .ant-calendar-input-wrap, .ant-calendar-footer, .ant-calendar-prev-year-btn, .ant-calendar-next-year-btn {
+  display: none!important;
+}
+
+@import "Calendar";
+@import "DecadePanel";
+@import "MonthPanel";
+@import "Picker";
+@import "Time";
+@import "TimePanel";
+@import "YearPanel";
+
+
+/* Fix Calendar */
+.ant-calendar-panel {
+  tr {
+    background: none!important;
+    th {
+      padding: 6px 0;
+      border: none;
+    }
+    td {
+      padding: 0;
+      vertical-align: middle;
+      a {
+        display: block;
+      }
+    }
+  }
+}
+
+td:last-child {
+  .ant-calendar-picker-container {
+    right: 14px;
+  }
+}

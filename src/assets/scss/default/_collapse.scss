@@ -1,0 +1,110 @@
+.collapse-wrap {
+    border-top: 1px solid $color-border;
+    zoom: 1;
+    &:after, &:before {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    &:first-child {
+        padding: 0;
+        border: 0;
+    }
+    &:last-child {
+        .collapse-body {
+            .collapse-content {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .collapse-header {
+        margin: 20px 0;
+        //overflow: hidden;
+        display: flex;
+        align-items: center;
+        >a {
+            //display: inline-block;
+            display: flex;
+            flex-grow: 1;
+            align-items: center;
+            font-weight: bold;
+            &:hover {
+                .title {
+                    color: $primary-hover!important;
+                }
+            }
+            .title {
+                display: flex;
+                align-items: center;
+                margin-bottom: 0;
+            }
+            i.icon-lg-check {
+                font-size: 23.2px;
+                width: 24px;
+                height: 24px;
+                margin-right: $spacing12;
+            }
+            .num-circle {
+                margin-top: -1px;
+                margin-right: $spacing12;
+                width: $spacing24;
+                height: $spacing24;
+                border-radius: 100%;
+                text-align: center;
+                line-height: 20px;
+                font-size: $font-normal;
+                padding: 0;
+                color: $color-white;
+                background-color: $primary-default;
+                border: 2px solid $primary-default;
+            }
+            &.collapsed {
+                [class^="icon-small"] {
+                    transform: inherit;
+                }
+                .num-circle {
+                    border: 2px solid $color-disable;
+                    background: none;
+                    color: $color-disable;
+                }
+            }
+            [class^="icon-"] {
+                float: left;
+                margin-right: 8px;
+            }
+            [class^="icon-small"] {
+                float: left;
+                margin-right: $spacing12;
+                //margin-top: 6px;
+                transform: rotate(90deg)
+            }
+            >span {
+                //overflow: hidden;
+                display: block;
+                //padding-top: 4px;
+            }
+        }
+        .form-check {
+            padding-top: 4px;
+            min-height: $spacing24;
+        }
+        .amount {
+            font-weight: bold;
+            color: $primary-default;
+            margin: 0;
+            line-height: $spacing24;
+        }
+    }
+    .collapse-body {
+        margin-top: 20px;
+        .collapse-content {
+            margin-bottom: $spacing24;
+        }
+        &.collapse-bg, .collapse-bg {
+            background-color: $color-background;
+            padding: $spacing24;
+            border-radius: 4px;
+            margin-top: 0;
+        }
+    }
+}
