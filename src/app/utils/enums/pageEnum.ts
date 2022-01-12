@@ -5,7 +5,7 @@ export enum PageEnum {
     SUMMARY = '/summary',
     SETTING = '/setting',
     USER_MANAGEMENT = '/user-mange',
-    LIGHING_MAP = '/lighting-map',
+    LIGHTING_MAP = '/lighting-map',
     ENTRY_VERIFICATION = '/ev',
     PERMISSION_DENIED = '/permission-denied',
     NO_PERMISSION = '/no-permission'

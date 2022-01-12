@@ -1,6 +1,6 @@
 import * as React from "react";
-import NavMenuItem from "./NavMenuItem";
-import { MenuItem } from "../../models/menus/menuItem";
+import NavMenuItem from "app/containers/Layout/NavMenuItem";
+import { MenuItem } from "app/models/menus/menuItem";
 import { PageEnum } from "app/utils/enums/pageEnum";
 
 interface SideBarProps {
@@ -39,7 +39,7 @@ const SideBar: React.FC<SideBarProps> = (props: any) => {
                 {
                     displayName: "Map",
                     icon: "",
-                    route: PageEnum.LIGHING_MAP,
+                    route: PageEnum.LIGHTING_MAP,
                     isActive: false
                 }
             ]

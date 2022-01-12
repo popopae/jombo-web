@@ -1,6 +1,6 @@
 import * as React from "react";
-import CardContent from "../../../components/UI/Card/CardContent";
 import Chart from "react-apexcharts";
+import CardContent from "app/components/UI/Card/CardContent";
 import CardBody from "app/components/UI/Card/CardBody";
 
 interface SummaryProps {

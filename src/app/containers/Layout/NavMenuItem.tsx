@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useNavigate } from "react-router-dom";
-import { ChildrenItem, MenuItem } from '../../models/menus/menuItem';
+import { ChildrenItem, MenuItem } from 'app/models/menus/menuItem';
 import { ValidateHelper } from "app/utils/helpers/validateHelper";
 
 interface NavMenuItemProps {

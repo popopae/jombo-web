@@ -1,5 +1,5 @@
 import * as React from "react";
-import { i18nHelper } from "../../i18n/i18n";
+import { i18nHelper } from "app/i18n/i18n";
 
 interface HeaderProps {
     handleNavOpen: Function;

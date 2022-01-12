@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Redirect, Route } from 'react-router';
-import { PageEnum } from '../../app/utils/enums/pageEnum';
+import { PageEnum } from 'app/utils/enums/pageEnum';
 // import { TokenHelper } from '../../app/utils';
 import { RouteProps } from 'react-router';
 import { PERMISSION, TYPE } from 'app/utils/enums/permissionEnum';

@@ -1,5 +1,5 @@
 import * as React from "react";
-import CardBody from "../../../components/UI/Card/CardBody";
+import CardBody from "app/components/UI/Card/CardBody";
 
 interface SettingProps {
 

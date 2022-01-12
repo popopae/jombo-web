@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Outlet } from "react-router-dom";
-import Header from "./Header";
-import SideBar from "./SideBar";
+import Header from "app/containers/Layout/Header";
+import SideBar from "app/containers/Layout/SideBar";
 
 // import ModalLoading from "../../components/UI/ModalLoading";
 interface HeaderLayoutProps {

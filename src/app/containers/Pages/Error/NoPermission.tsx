@@ -1,7 +1,7 @@
 import * as React from "react";
 import { CommonConstant } from "app/utils/constants/commonConstant";
 import { ValidateHelper } from "app/utils/helpers/validateHelper";
-import { i18nHelper } from "../../../i18n/i18n";
+import { i18nHelper } from "app/i18n/i18n";
 
 interface NoPermissionProps {
     homeURL?: string;

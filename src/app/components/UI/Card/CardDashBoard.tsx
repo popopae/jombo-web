@@ -1,5 +1,5 @@
 import * as React from "react";
-import ToolbarMonthWeekDay from "../Toolbar/ToolbarMonthWeekDay";
+import ToolbarMonthWeekDay from "app/components/UI/Toolbar/ToolbarMonthWeekDay";
 
 interface CardDashBoardProps {
     label?: string;

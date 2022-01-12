@@ -1,7 +1,7 @@
 import { PermissionScope } from 'app/models/payload/permission/PermissionScope';
 import { CommonConstant } from 'app/utils/constants/commonConstant';
 import * as React from 'react';
-import * as permission from '../../utils/enums/permissionEnum';
+import * as permission from 'app/utils/enums/permissionEnum';
 
 const CheckPermission = (props: any) => {
   const userPermission = sessionStorage.getItem(CommonConstant.jwtUserDetail);
