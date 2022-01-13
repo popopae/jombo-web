@@ -80,7 +80,7 @@ const DashBoard: React.FC<DashBoardProps> = (props: DashBoardProps) => {
                         toolbarMonthWeekDay={true}
                     >
                         <DonutChart
-                            width="70%"
+                            width="80%"
                         />
                     </CardDashBoard>
                 </div>

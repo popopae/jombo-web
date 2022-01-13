@@ -1,5 +1,6 @@
 .navbar, .headbar {
   height: 64px;
+  background-color: #222b45 !important;
   position: absolute;
   z-index: 1001;
   top: 0;
@@ -29,7 +30,7 @@
     position: fixed;
     background-color: $color-white;
     //box-shadow: 0 0 6px 0 rgba($primary-default, 0.1);
-    border-bottom: 1px solid $color-border;
+    // border-bottom: 1px solid $color-border;
     .nav-toggle {
       display: block;
     }
