@@ -5,7 +5,7 @@ axios.defaults.timeout = 1000 * 60 * 2;
 
 axios.interceptors.request.use(async function (config) {
     config.url = `${process.env["SIG_FOX_API_URL"]}${config.url}`
-  
+    console.log(config.url);
     return config;
 }, function (error) {
     console.error('Error:', error);
