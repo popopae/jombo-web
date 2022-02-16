@@ -20,24 +20,7 @@ interface DashBoardProps {
 const DashBoard: React.FC<DashBoardProps> = (props: DashBoardProps) => {
 
     const dispatch = useDispatch();
-    const lastedUplinkModel: LastedUplinkResponse = {
-        uplink_id: 0,
-        device_id: 0,
-        current_amp: 0,
-        voltage: 0,
-        active_power: 0,
-        power_factor: 0,
-        frequency: 0,
-        statue_onoff: 0,
-        controller_temp: 0,
-        active_energy: 0,
-        brightness: 0,
-        status_device: '',
-        device_code: '',
-        device_name: '',
-        device_type_id: '',
-        device_type_name: '',
-    };
+    const lastedUplinkModel: LastedUplinkResponse = {};
 
     let [dataUplinkLasted, setDataUplinkLasted] = React.useState(lastedUplinkModel);
 
@@ -46,11 +29,11 @@ const DashBoard: React.FC<DashBoardProps> = (props: DashBoardProps) => {
     });
 
     React.useEffect(() => {
-        debugger
+
         if (ValidateHelper.isObjectEmptyOrNullOrUndefined(lastedUplinkResponse)) {
             dispatch(CallBackAction.getUplinkLastedData(1));
         }
-
+   
         if (!ValidateHelper.isObjectEmptyOrNullOrUndefined(lastedUplinkResponse)) {
             setDataUplinkLasted(lastedUplinkResponse)
         }
@@ -63,7 +46,8 @@ const DashBoard: React.FC<DashBoardProps> = (props: DashBoardProps) => {
     return (
 
         <CardBody title="Dash Board" >
-
+            {lastedUplinkResponse !== null &&
+            <>
             <div className="row">
                 <div className="col-lg-3">
                     <CardPreview
@@ -186,6 +170,8 @@ const DashBoard: React.FC<DashBoardProps> = (props: DashBoardProps) => {
 
                 </div>
             </div>
+            </>
+            }
         </CardBody>
     );
 }
