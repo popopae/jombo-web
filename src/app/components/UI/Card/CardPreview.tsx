@@ -5,7 +5,7 @@ interface CardPreviewProps {
     desc: string;
     styleType: string;
     content: string;
-    value: string;
+    value: any;
 }
 
 const CardPreview: React.FC<CardPreviewProps> = (props: CardPreviewProps) => {

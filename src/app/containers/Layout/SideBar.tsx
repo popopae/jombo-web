@@ -45,15 +45,14 @@ const SideBar: React.FC<SideBarProps> = (props: any) => {
             ]
         },
         {
-            displayName: "App Setting",
+            displayName: "Device Setting",
             icon: "icon-setting",
-            route: "appSetting",
+            route: "deviceSetting",
             isActive: false,
             isOpen: false,
-
             children: [
                 {
-                    displayName: "Setting",
+                    displayName: "Device",
                     icon: "",
                     route: PageEnum.SETTING,
                     isActive: false

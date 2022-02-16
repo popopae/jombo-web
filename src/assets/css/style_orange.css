@@ -14330,7 +14330,7 @@ ul.wizard-steps li:last-child:before {
 }
 .clearfix:after,
 .clearfix:before {
-  content: " ";
+  content: "";
   display: table;
 }
 .clearfix:after {
@@ -15926,7 +15926,7 @@ td:last-child .ant-calendar-picker-container {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: #434c58 !important;
+  color: #f0f0f0 !important;
 }
 .user-dropdown .dropdown-menu {
   width: 190px;

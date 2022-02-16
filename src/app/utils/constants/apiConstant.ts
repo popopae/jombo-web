@@ -16,5 +16,7 @@ export class ApiConstant {
     public static RenewToken = 'api/core/uaaBff/renewToken';
     public static Erfx = 'api/core/erfx';
     public static Auction = 'api/core/auction';
+
+    public static Callback = 'callback';
 }
 

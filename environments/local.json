@@ -1,5 +1,5 @@
 {
-    "GATEWAY_URL": "http://alpha.api-directory.supplierwebwork.com/coresupplier/",
+    "SIG_FOX_API_URL": "http://localhost:3100/api/sigfox/",
     "PASSWORD_ENCRYPTED_KEY": "nfd5vKL2dV7DFjHG8QAdegIY2dYhoJlB",
     "CREATE_AVL_REQUEST_URL": "https://avl-web-dev.pantavanij.com/avl-request-supplier-directory"
 }

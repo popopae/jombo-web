@@ -17,7 +17,7 @@ declare module "*.json" {
 
 declare namespace NodeJS {
     interface ProcessEnv {
-      GATEWAY_URL?: string;
+      SIG_FOX_API_URL?: string;
       PASSWORD_ENCRYPTED_KEY?: string;
       CREATE_AVL_REQUEST_URL?: string;
     }

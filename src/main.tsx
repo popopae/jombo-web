@@ -5,10 +5,8 @@ import { configureStore } from 'app/store';
 import { PersistGate } from 'redux-persist/integration/react';
 import RouterApp from 'app/index';
 import { HashRouter } from "react-router-dom";
-import { injectStore } from 'app/middleware/axiosInterceptor';
 // prepare store
 const { store, persistor } = configureStore();
-injectStore(store);
 
 ReactDOM.render(
   <Provider store={store}>

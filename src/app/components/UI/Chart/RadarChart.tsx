@@ -9,16 +9,20 @@ const RadarChart: React.FC<RadarChartProps> = (props: RadarChartProps) => {
     const { width } = props;
 
     const radar: any = {
-        series: [{
-            name: 'Series 1',
-            data: [80, 50, 30, 40, 100, 20],
-        }, {
-            name: 'Series 2',
-            data: [20, 30, 40, 80, 20, 80],
-        }, {
-            name: 'Series 3',
-            data: [44, 76, 78, 13, 43, 10],
-        }],
+        series: [
+            {
+                name: 'Series 1',
+                data: [80, 50, 30, 40, 100, 20],
+            },
+            {
+                name: 'Series 2',
+                data: [20, 30, 40, 80, 20, 80],
+            },
+            {
+                name: 'Series 3',
+                data: [44, 76, 78, 13, 43, 10],
+            }
+        ],
         option: {
             height: 350,
             type: 'radar',
@@ -30,7 +34,7 @@ const RadarChart: React.FC<RadarChartProps> = (props: RadarChartProps) => {
             },
 
             title: {
-                text: 'Radar Chart - Multi Series'
+                text: ''
             },
             stroke: {
                 width: 2

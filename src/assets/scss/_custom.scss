@@ -62,7 +62,7 @@
 }
 
 h2 span {
-  color: #01365b;
+  color: white;
 }
 
 .img-profile-demand-items {
@@ -119,4 +119,12 @@ h2 span {
   background-clip: border-box;
   border: 1px solid #EBEDF3;
   border-radius: 0.42rem;
+}
+
+.apexcharts-legend-text {
+  color: white !important;
+}
+
+.apexcharts-text {
+  color: white !important;
 }

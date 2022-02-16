@@ -90,7 +90,7 @@ module.exports = {
   plugins: [
     new webpack.EnvironmentPlugin({
       NODE_ENV: 'development', // use 'development' unless process.env.NODE_ENV is defined
-      GATEWAY_URL: env.GATEWAY_URL,
+      SIG_FOX_API_URL: env.SIG_FOX_API_URL,
       PASSWORD_ENCRYPTED_KEY: env.PASSWORD_ENCRYPTED_KEY,
       CREATE_AVL_REQUEST_URL: env.CREATE_AVL_REQUEST_URL,
       DEBUG: false

@@ -361,7 +361,7 @@
                     background-color: transparent;
                     transition: $transition;
                     @include border-radius(2px);
-                    content: " ";
+                    content: "";
                 }
 
                 &.active {

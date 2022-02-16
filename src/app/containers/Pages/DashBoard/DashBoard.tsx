@@ -8,11 +8,40 @@ import BarChart from "app/components/UI/Chart/BarChart";
 import CardPreview from "app/components/UI/Card/CardPreview";
 import RadarChart from "app/components/UI/Chart/RadarChart";
 import ProgressChart from "app/components/UI/Chart/ProgressChart";
+import { useDispatch, useSelector } from "react-redux";
+import { CallBackAction } from "app/actions/callback.action";
+import { RootState } from "app/reducers";
+import { LastedUplinkResponse } from "app/models/payload/callback/lastedUplinkResponse";
+import { ValidateHelper } from "app/utils/helpers/validateHelper";
 
 interface DashBoardProps {
 }
 
 const DashBoard: React.FC<DashBoardProps> = (props: DashBoardProps) => {
+
+    const dispatch = useDispatch();
+    const lastedUplinkModel: LastedUplinkResponse = {};
+
+    let [dataUplinkLasted, setDataUplinkLasted] = React.useState(lastedUplinkModel);
+
+    let lastedUplinkResponse: RootState.LastedUplinkState = useSelector((state: RootState) => {
+        return state.lastedUplinkResponse;
+    });
+
+    React.useEffect(() => {
+        debugger
+        if (ValidateHelper.isObjectEmptyOrNullOrUndefined(lastedUplinkResponse)) {
+            dispatch(CallBackAction.getUplinkLastedData(1));
+        }
+
+        if (!ValidateHelper.isObjectEmptyOrNullOrUndefined(lastedUplinkResponse)) {
+            setDataUplinkLasted(lastedUplinkResponse)
+        }
+
+        if (lastedUplinkResponse !== dataUplinkLasted) {
+            setDataUplinkLasted(lastedUplinkResponse)
+        }
+    }, [dataUplinkLasted, lastedUplinkResponse])
 
     return (
         <CardBody title="Dash Board" >
@@ -24,7 +53,7 @@ const DashBoard: React.FC<DashBoardProps> = (props: DashBoardProps) => {
                         desc="desc"
                         styleType="bg-light-warning"
                         content="Energy Power"
-                        value="14.0 Kw"
+                        value={lastedUplinkResponse.active_energy == null ? 0 : lastedUplinkResponse.active_energy}
                     />
                 </div>
                 <div className="col-lg-3">
@@ -33,7 +62,7 @@ const DashBoard: React.FC<DashBoardProps> = (props: DashBoardProps) => {
                         desc="desc"
                         styleType="bg-light-success"
                         content="Peak Saved"
-                        value="16 Kw"
+                        value={lastedUplinkResponse.active_power == null ? 0 : lastedUplinkResponse.active_power}
                     />
 
                 </div>
@@ -43,7 +72,7 @@ const DashBoard: React.FC<DashBoardProps> = (props: DashBoardProps) => {
                         desc="desc"
                         styleType="bg-light-danger"
                         content="Load Factor"
-                        value="30 %"
+                        value={lastedUplinkResponse.power_factor == null ? 0 : lastedUplinkResponse.power_factor}
                     />
                 </div>
             </div>
