@@ -1,4 +1,3 @@
-import { PageEnum } from 'app/utils/enums/pageEnum';
 import axios from 'axios';
 
 axios.defaults.timeout = 1000 * 60 * 2;
@@ -8,7 +7,7 @@ axios.interceptors.request.use(async function (config) {
     console.log(config.url);
     return config;
 }, function (error) {
-    console.error('Error:', error);
+    console.log('Error Request:', error);
     return Promise.reject(error);
 });
 
@@ -19,8 +18,8 @@ axios.interceptors.response.use(function (response) {
 }, function (error) {
     // Any status codes that falls outside the range of 2xx cause this function to trigger
     // Do something with response error
-    console.error('Error:', error);
-    window.location.href = PageEnum.NO_PERMISSION;
+    console.log('Error Response:', error);
+    //window.location.href = PageEnum.NO_PERMISSION;
     return Promise.reject(error);
 });
 
