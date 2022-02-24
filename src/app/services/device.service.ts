@@ -1,10 +1,11 @@
 import { ApiConstant } from "../utils/constants/apiConstant";
 import { httpClient } from "../middleware/axiosInterceptor";
+import { DataTableRequest } from "app/models/payload/datatable/dataTableRequest";
 
-const CallBackService = {
-    getUplinkData(deviceCode: string, callback: Function) {
+const DeviceService = {
+    searchDevice(request: DataTableRequest, callback: Function) {
         httpClient
-            .get(`${ApiConstant.Callback}/uplink/${deviceCode}`)
+            .post(`${ApiConstant.Device}/search`, request)
             .then(function (response) {
                 callback(false, response.data.data);
             })
@@ -13,4 +14,4 @@ const CallBackService = {
             });
     },
 };
-export default CallBackService;
+export default DeviceService;

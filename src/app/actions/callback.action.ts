@@ -10,12 +10,12 @@ export namespace CallBackAction {
     }
 
     export const getCallBackDataSuccess = createAction<LastedUplinkResponse>(Type.GET_CALLBACK_DATA_SUCCESS);
-    export const getCallBackDataFail = createAction<LastedUplinkResponse>(Type.GET_CALLBACK_DATA_SUCCESS);
+    export const getCallBackDataFail = createAction<LastedUplinkResponse>(Type.GET_CALLBACK_DATA_FAIL);
 
-    export function getUplinkLastedData(deviceId: number) {
+    export function getUplinkLastedData(deviceCode: string) {
         return (dispatch: any) => {
 
-            CallBackService.getUplinkData(deviceId, (isError: boolean, newState: LastedUplinkResponse) => {
+            CallBackService.getUplinkData(deviceCode, (isError: boolean, newState: LastedUplinkResponse) => {
                 if (!isError) {
                     dispatch(getCallBackDataSuccess(newState));
                 } else {

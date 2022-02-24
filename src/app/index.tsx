@@ -12,6 +12,7 @@ import LoadProfile from 'app/containers/Pages/Summary/LoadProfile';
 import Summary from 'app/containers/Pages/Summary/Summary';
 import DashBoard from 'app/containers/Pages/DashBoard/DashBoard';
 import LightingMap from 'app/containers/Pages/Map/LightingMap';
+import DeviceList from './containers/Pages/Device/DeviceList';
 
 interface RouterAppProps {
 }
@@ -23,7 +24,8 @@ const RouterApp: React.FC<RouterAppProps> = (props: any) => {
       <Routes>
         {/* Routes that needs a navbar will need to go as children of this Route component */}
         <Route path={PageEnum.INDEX} element={<HeaderLayout triggerLanguage={() => setTriggerChangeLanguage(!triggerChangeLanguage)} />}>
-          <Route path={PageEnum.INDEX} element={<DashBoard />} />
+          <Route path={PageEnum.INDEX} element={<DeviceList />} />
+          <Route path={`${PageEnum.DASHBOARD}/:deviceCode`} element={<DashBoard />} />
           <Route path={PageEnum.SUMMARY} element={<Summary />} />
           <Route path={PageEnum.LOAD_PROFILE} element={<LoadProfile />} />
           <Route path={PageEnum.SETTING} element={<Setting />} />

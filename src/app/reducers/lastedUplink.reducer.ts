@@ -15,7 +15,7 @@ export const lastedUplinkReducer = handleActions<RootState.LastedUplinkState, La
         [CallBackAction.Type.GET_CALLBACK_DATA_FAIL]: (state, action: Action<LastedUplinkResponse>) => {
 
             return state = null;
-        }
+        },
     },
     initialState
 );

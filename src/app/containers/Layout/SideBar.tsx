@@ -19,7 +19,7 @@ const SideBar: React.FC<SideBarProps> = (props: any) => {
 
             children: [
                 {
-                    displayName: "DashBoard",
+                    displayName: "Device",
                     icon: "",
                     route: PageEnum.INDEX,
                     isActive: false

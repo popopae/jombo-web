@@ -1,5 +1,9 @@
 import * as React from "react";
 import { i18nHelper } from "app/i18n/i18n";
+import { RootState } from "app/reducers";
+import { useSelector } from "react-redux";
+import { ValidateHelper } from "app/utils/helpers/validateHelper";
+import { LastedUplinkResponse } from "app/models/payload/callback/lastedUplinkResponse";
 
 interface HeaderProps {
     handleNavOpen: Function;
@@ -10,6 +14,23 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = (props: HeaderProps) => {
 
     const { handleNavOpen, onChangeLanguage, isNavOpen } = props;
+
+    const lastedUplinkModel: LastedUplinkResponse = null;
+    let [dataUplinkLasted, setDataUplinkLasted] = React.useState(lastedUplinkModel);
+
+    let lastedUplinkResponse: RootState.LastedUplinkState = useSelector((state: RootState) => {
+        return state.lastedUplinkResponse;
+    });
+
+    React.useEffect(() => {
+        if (!ValidateHelper.isObjectEmptyOrNullOrUndefined(dataUplinkLasted)) {
+            setDataUplinkLasted(lastedUplinkResponse)
+        }
+
+        if (lastedUplinkResponse !== dataUplinkLasted) {
+            setDataUplinkLasted(lastedUplinkResponse)
+        }
+    }, [dataUplinkLasted, lastedUplinkResponse])
 
     let [navOpen, setNavOpen] = React.useState(isNavOpen);
     let [langOpen, setLangOpen] = React.useState(false);
@@ -46,14 +67,13 @@ const Header: React.FC<HeaderProps> = (props: HeaderProps) => {
                         <span className="path2"></span>
                     </i>
                 </div>
-                <a className="">
-                    <span>Service</span>
-                </a>
-                <div className="sub-branch">
-                    <strong>Service</strong>
-                    <span>-</span>
-                    <span className="ml-8px">1</span>
-                </div>
+                {!ValidateHelper.isObjectEmptyOrNullOrUndefined(dataUplinkLasted) &&
+                    <div className="sub-branch">
+                        <strong>{dataUplinkLasted.device_name} - {dataUplinkLasted.status_device} - {dataUplinkLasted.statue_onoff}</strong>
+                        <span>-</span>
+                        <span className="ml-8px">1</span>
+                    </div>
+                }
             </div>
             <div className="float-right">
                 <div className="lang">

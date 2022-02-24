@@ -1,10 +1,4 @@
-export interface ApiResponse {
-  status?: Status;
-  errorMessage?: string;
-  data?: any;
-}
-
-interface Status {
-  code: string;
-  description: string;
+export interface ApiResponse<T> {
+  data?: T;
+  isError?: boolean;
 }

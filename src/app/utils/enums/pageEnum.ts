@@ -2,6 +2,7 @@
 export enum PageEnum {
     INDEX = '/',
     LOAD_PROFILE = '/load-profile',
+    DASHBOARD = '/dashboard',
     SUMMARY = '/summary',
     SETTING = '/setting',
     USER_MANAGEMENT = '/user-mange',

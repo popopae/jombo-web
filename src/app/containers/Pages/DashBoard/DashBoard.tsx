@@ -13,14 +13,18 @@ import { CallBackAction } from "app/actions/callback.action";
 import { RootState } from "app/reducers";
 import { LastedUplinkResponse } from "app/models/payload/callback/lastedUplinkResponse";
 import { ValidateHelper } from "app/utils/helpers/validateHelper";
+import { useNavigate, useParams } from "react-router-dom";
+import { PageEnum } from "app/utils/enums/pageEnum";
 
 interface DashBoardProps {
 }
 
-const DashBoard: React.FC<DashBoardProps> = (props: DashBoardProps) => {
+const DashBoard: React.FC<DashBoardProps> = () => {
 
+    const { deviceCode } = useParams();
+    let navigate = useNavigate();
     const dispatch = useDispatch();
-    const lastedUplinkModel: LastedUplinkResponse = {};
+    const lastedUplinkModel: LastedUplinkResponse = null;
 
     let [dataUplinkLasted, setDataUplinkLasted] = React.useState(lastedUplinkModel);
 
@@ -30,11 +34,11 @@ const DashBoard: React.FC<DashBoardProps> = (props: DashBoardProps) => {
 
     React.useEffect(() => {
 
-        if (ValidateHelper.isObjectEmptyOrNullOrUndefined(lastedUplinkResponse)) {
-            dispatch(CallBackAction.getUplinkLastedData(1));
+        if (ValidateHelper.isObjectEmptyOrNullOrUndefined(dataUplinkLasted)) {
+            dispatch(CallBackAction.getUplinkLastedData(deviceCode));
         }
 
-        if (!ValidateHelper.isObjectEmptyOrNullOrUndefined(lastedUplinkResponse)) {
+        if (!ValidateHelper.isObjectEmptyOrNullOrUndefined(dataUplinkLasted)) {
             setDataUplinkLasted(lastedUplinkResponse)
         }
 
@@ -42,6 +46,10 @@ const DashBoard: React.FC<DashBoardProps> = (props: DashBoardProps) => {
             setDataUplinkLasted(lastedUplinkResponse)
         }
     }, [dataUplinkLasted, lastedUplinkResponse])
+
+    const onClickBack = () => {
+        navigate(PageEnum.INDEX);
+    }
 
     return (
 
@@ -171,6 +179,11 @@ const DashBoard: React.FC<DashBoardProps> = (props: DashBoardProps) => {
                         </div>
                     </div>
                 </>
+            }
+            {ValidateHelper.isObjectEmptyOrNullOrUndefined(dataUplinkLasted) &&
+                <CardDashBoard label={"No data from uplink"}>
+                    <a className="btn btn-light-success font-weight-bolder font-size-sm" onClick={() => onClickBack()}>Back</a>
+                </CardDashBoard>
             }
         </CardBody>
     );
